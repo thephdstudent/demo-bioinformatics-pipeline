@@ -5,6 +5,8 @@ def load_counts(file_path):
     return pd.read_csv(file_path, sep="\t")
 
 def normalize_counts(df):
+    if "counts" not in df.columns:
+        raise ValueError("Missing 'counts' column")
     df["normalized"] = df["counts"] / df["counts"].sum()
     return df
 
