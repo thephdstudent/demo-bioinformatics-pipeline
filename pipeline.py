@@ -16,3 +16,4 @@ if __name__ == "__main__":
     normalized = normalize_counts(counts)
 
     normalized.to_csv(output_file, sep="\t", index=False)
+# TODO: add better CLI argument parsing
